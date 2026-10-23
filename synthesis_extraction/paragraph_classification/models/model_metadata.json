@@ -1,0 +1,25 @@
+{
+  "config": {
+    "n_topics": 200,
+    "topic_probability_threshold": 0.05,
+    "max_ngram": 3,
+    "max_topics_per_sentence": 3,
+    "n_estimators": 20,
+    "max_depth": 20,
+    "max_features": 8000,
+    "min_df": 2,
+    "lda_max_iter": 10,
+    "max_lda_sentences": 50000,
+    "random_state": 17
+  },
+  "labels": {
+    "0": "not_synthesis",
+    "1": "synthesis"
+  },
+  "vocabulary_size": 8000,
+  "feature_count": 73522,
+  "artifact_files": [
+    "lda_model.joblib",
+    "paragraph_classifier.joblib"
+  ]
+}
