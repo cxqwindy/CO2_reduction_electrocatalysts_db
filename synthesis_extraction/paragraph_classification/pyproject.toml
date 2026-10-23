@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools==75.8.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthesis-paragraph-classifier"
+version = "1.0.0"
+description = "LDA + random-forest classifier for materials synthesis paragraphs"
+requires-python = ">=3.10"
+dependencies = [
+  "joblib==1.5.0",
+  "numpy==2.1.0",
+  "scikit-learn==1.6.1",
+  "scipy==1.15.3",
+]
+
+[project.scripts]
+synthesis-paragraph-classifier = "synthesis_paragraph_classifier.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
